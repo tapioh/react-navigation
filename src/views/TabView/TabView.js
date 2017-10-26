@@ -158,7 +158,6 @@ class TabView extends PureComponent<void, Props, void> {
       tabBarComponent,
       tabBarPosition,
       animationEnabled,
-      swipeEnabled,
       lazy,
       screenProps,
     } = this.props;
@@ -173,6 +172,8 @@ class TabView extends PureComponent<void, Props, void> {
       screenProps || {}
     );
 
+    const swipeEnabled =
+      options.swipeEnabled == null ? this.props.swipeEnabled : options.swipeEnabled;
     const tabBarVisible =
       options.tabBarVisible == null ? true : options.tabBarVisible;
 
